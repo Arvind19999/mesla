@@ -1,0 +1,4 @@
+to align the text of a div , use "text-align: 'left'"    
+
+if you are importing html from bootstrap then convert these tags like span, br, hr, img
+input into self-closing tags. 

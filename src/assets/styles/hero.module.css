@@ -1,0 +1,6 @@
+.jumboleft{
+    text-align: left;
+    background-image: url('../images/hero.jpg') !important;
+    background-size: cover;
+    /* opacity: 0.5; */
+}
