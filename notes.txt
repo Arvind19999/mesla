@@ -2,3 +2,10 @@ to align the text of a div , use "text-align: 'left'"
 
 if you are importing html from bootstrap then convert these tags like span, br, hr, img
 input into self-closing tags. 
+
+-> while changing the default color of buttons in Bootstrap , specify !important.
+
+-> with display flex, to align content in center , specify 
+justify-content: center;
+
+-> To overwrite the color the nav of Link, specify the !important

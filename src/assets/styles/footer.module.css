@@ -1,0 +1,25 @@
+.footer{
+    background-color: #127EA6;
+    color: white;
+}
+
+.listType{
+    list-style: none;
+}
+
+.socialIcons{
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+}
+
+.footer2Links{
+    display: flex;
+    justify-content: center;
+}
+
+.arrowIcon{
+    /* padding-top: 5px; */
+   margin-right: 40px;
+   font-size: 20px;
+}

@@ -1,6 +1,10 @@
 .jumboleft{
     text-align: left;
-    background-image: url('../images/hero.jpg') !important;
+    background-image: url('../images/hero_finally.jpg') !important;
     background-size: cover;
-    /* opacity: 0.5; */
+    color: white;
+}
+
+.askQuestion{
+    background-color: #127EA6 !important;
 }

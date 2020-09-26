@@ -17,7 +17,7 @@ export default function Hero() {
             <strong>Login / Register to get started.</strong> 
           </p>
           <p className="lead">
-            <Button color="primary">Ask Question</Button>
+            <Button className={styles.askQuestion}>Ask Question</Button>
           </p>
         </Jumbotron>
       </div>
