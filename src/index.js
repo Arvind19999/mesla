@@ -9,9 +9,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // replaced <React.StrictMode> by <React.Fragment>
+  <React.Fragment>    
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

@@ -6,8 +6,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    NavbarText
+    NavLink
   } from 'reactstrap';
 
 import styles from '../../assets/styles/header.module.css'
@@ -23,7 +22,7 @@ export default function Header() {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem className={styles.navItem}>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#" className={styles.navLink}>
@@ -34,10 +33,10 @@ export default function Header() {
                 <NavLink href="#" className={styles.navLink}>Jobs</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" className={styles.navLink}>My account</NavLink>
+                <NavLink href="/user/login" className={styles.navLink}>My account</NavLink>
               </NavItem>
             </Nav>
-            <NavbarText className={styles.navLink}>Login/Register</NavbarText>
+            <NavLink href="/user/login" className={styles.navLink}>Login/Register</NavLink>
           </Collapse>
         </Navbar>
       </div>

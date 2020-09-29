@@ -1,5 +1,10 @@
-/* .App {
-  text-align: center;
-} */
+button[type="submit"] {
+    background-color: #127EA6 !important;
+    color: white
+}
 
-
+button[type="submit"]:hover {
+    background-color: #127EA6 !important;
+    color: white;
+    box-shadow: 5px 20px 10px 1px rgba(0, 0, 0, 0.253) !important;
+}

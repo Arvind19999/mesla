@@ -3,13 +3,13 @@ import Tag from './Tag'
 
 export default function QuestionListHeader() {
     return (
-        <div className="container-fluid m-2 mb-4 p-2 border border-primary">
+        <div className="container-fluid m-2 mb-4 p-2">
             <div className="row">
                 <div className="col-8 text-left">
                   <h2>Popular Questions</h2>  
                 </div>
                 <div className="col-4 text-right">
-                    <button className="btn btn-info">Ask Question</button>
+                    <button className="btn btn-info">See Here</button>
                 </div>
             </div>
             <div className="row">

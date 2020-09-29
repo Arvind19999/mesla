@@ -30,20 +30,20 @@ export default function Footer() {
               <div className="footer-body">
                 <ul className={styles.listType}>
                   <div className="row">
-                      <div className="col-md-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
-                      <div className="col-md-10"><li>Home</li></div>
+                      <div className="col-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
+                      <div className="col-10"><li>Home</li></div>
                   </div>
                   <div className="row">
-                      <div className="col-md-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
-                      <div className="col-md-10"><li>About Us</li></div>
+                      <div className="col-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
+                      <div className="col-10"><li>About Us</li></div>
                   </div>
                   <div className="row">
-                      <div className="col-md-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
-                      <div className="col-md-10"><li>My Account</li></div>
+                      <div className="col-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
+                      <div className="col-10"><li>My Account</li></div>
                   </div>
                   <div className="row">
-                      <div className="col-md-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
-                      <div className="col-md-10"><li>Jobs</li></div>
+                      <div className="col-2"><FontAwesomeIcon icon={faAngleDoubleRight} /></div>
+                      <div className="col-10"><li>Jobs</li></div>
                   </div>
                 </ul>
               </div>
