@@ -8,7 +8,7 @@ import { faAngleDoubleRight  } from "@fortawesome/free-solid-svg-icons";
 export default function Footer() {
     return (
       <footer>
-        <div className={`container-fluid ${styles.footer}`}>
+        <div className={`container-fluid ${styles.footer} text-center`}>
           <div className="row">
             <div className="col-md-4 p-4">
               <div className="footer-header">
