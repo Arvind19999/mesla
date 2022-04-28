@@ -1,0 +1,151 @@
+const ErrorResponse = require('../utils/errorResponse')
+const asyncHandler = require('../middleware/asyncHandler')
+
+
+// const Job = require('../models/Job')
+const Answer = require('../models/Answer')
+const controllerMethods = {
+
+    /**
+     * @desc Get all Jobs
+     * @route GET /api/jobs
+     * @access Public
+     * 
+     */
+
+    getAllAnswers: asyncHandler(async (req, res, next) => {
+        const answers = await Answer.find()
+          .populate({
+            path: "user",
+            select: "name email _id",
+          })
+          .populate({
+            path: "question",
+            select: "title description _id",
+          });
+        res.status(200).json({
+            count: answers.length,
+            success: true,
+            data: answers
+        })
+    }),
+
+
+
+
+
+
+    /**
+     * @params job Object
+     * @desc Create a new job
+     * @route POST /api/jobs
+     * @access Public
+     * 
+     */
+
+    createAnswer: asyncHandler(async (req, res, next) => {
+        req.body.user = req.user.id
+        const answer = await Answer.create(req.body)
+
+        const updatedAnswer = {
+            ...answer._doc,
+            user: {
+                name: req.user.name,
+                answers: req.user.answers,
+                _id: req.user._id
+            }
+        }
+        res.status(201).json({
+            success: true,
+            data: updatedAnswer
+        })
+
+    }),
+
+
+    /**
+     * @params job id
+     * @desc Get Job by id
+     * @route GET /api/jobs/:id
+     * @access Public
+     * 
+     */
+
+    getAnswer: asyncHandler(async (req, res, next) => {
+
+        const answer = await Answer.findById(req.params.id)
+        if (!answer) {
+            return next(new ErrorResponse(`Job not found with id of ${req.params.id}`, 404))
+        }
+        res.status(200).json({
+            success: true,
+            data: answer
+        })
+
+    }),
+
+
+
+
+
+
+
+
+    /**
+     * @params job id , job object
+     * @desc Update Job of id
+     * @route PUT /api/jobs/:id
+     * @access Publ
+     * 
+     */
+
+    updateAnswer: asyncHandler(async (req, res, next) => {
+
+
+        const answer = await Answer.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true
+        })
+
+        if (!answer) {
+            return next(new ErrorResponse(`Job not found with id of ${req.params.id}`, 404))
+        }
+        res.status(200).json({
+            success: true,
+            data: answer
+        })
+
+
+    }),
+
+
+
+
+
+
+
+    /**
+     * @params job id
+     * @desc Delete Job by id
+     * @route DELETE /api/jobs/:id
+     * @access Public
+     * 
+     */
+
+    deleteAnswer: asyncHandler(async (req, res, next) => {
+
+        const answer = await Answer.findByIdAndDelete(req.params.id)
+
+        if (!answer) {
+            return next(new ErrorResponse(`Job not found with id of ${req.params.id}`, 404))
+        }
+        res.status(200).json({
+            success: true,
+            data: {}
+        })
+
+    }),
+
+}
+
+module.exports = { ...controllerMethods }
