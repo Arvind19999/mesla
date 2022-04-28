@@ -1,0 +1,15 @@
+const ErrorResponse = require('../utils/errorResponse')
+const asyncHandler = require('../middleware/asyncHandler')
+
+const User = require('../models/User');
+
+
+const controllerMethods = {
+
+    dummy: asyncHandler(async (req, res, next) => {
+       
+
+    })
+}
+
+module.exports = { ...controllerMethods }
